@@ -538,31 +538,64 @@
 
 
       <div class="col">
-        <form 
-         class="contact-form"
-         action="https://formspree.io/f/mzznqdla"
-         method="POST"
-        >
+  <form 
+    class="contact-form"
+    action="https://formspree.io/f/mzznqdla"
+    method="POST"
+  >
 
-          <div class="form-row">
-            <label for="name">Name</label>
-            <input id="name" type="text" placeholder="Your name">
-          </div>
-          <div class="form-row">
-            <label for="email">Email</label>
-            <input id="email" type="email" placeholder="you@example.com">
-          </div>
-          <div class="form-row">
-            <label for="company">Company</label>
-            <input id="company" type="text" placeholder="Company / Brand name">
-          </div>
-          <div class="form-row">
-            <label for="message">Message</label>
-            <textarea id="message" rows="4" placeholder="Tell us about your leasing interest or enquiry."></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width">Submit Enquiry (Static Demo)</button>
-        </form>
-      </div>
+    <!-- Hidden source (推荐) -->
+    <input type="hidden" name="source" value="POP Website · Leasing Enquiry">
+
+    <div class="form-row">
+      <label for="name">Name</label>
+      <input 
+        id="name"
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+      >
+    </div>
+
+    <div class="form-row">
+      <label for="email">Email</label>
+      <input 
+        id="email"
+        type="email"
+        name="email"
+        placeholder="you@example.com"
+        required
+      >
+    </div>
+
+    <div class="form-row">
+      <label for="company">Company</label>
+      <input 
+        id="company"
+        type="text"
+        name="company"
+        placeholder="Company / Brand name"
+      >
+    </div>
+
+    <div class="form-row">
+      <label for="message">Message</label>
+      <textarea 
+        id="message"
+        name="message"
+        rows="4"
+        placeholder="Tell us about your leasing interest or enquiry."
+        required
+      ></textarea>
+    </div>
+
+    <button type="submit" class="btn-primary full-width">
+      Submit Enquiry
+    </button>
+
+  </form>
+</div>
     </div>
   </section>
 
