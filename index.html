@@ -539,6 +539,7 @@
 
       <div class="col">
   <form 
+    id="leasing-form"
     class="contact-form"
     action="https://formspree.io/f/mzznqdla"
     method="POST"
@@ -595,6 +596,13 @@
     </button>
 
   </form>
+  <div 
+   id="form-success"
+   style="display:none; margin-top:20px; font-size:15px; color:#1a7f6b;"
+  >
+  Thank you for your enquiry.  
+  Our leasing team will contact you within 2–3 working days.
+</div>
 </div>
     </div>
   </section>
@@ -608,7 +616,37 @@
   </footer>
 
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  const form = document.getElementById("leasing-form");
+  const successMessage = document.getElementById("form-success");
+
+  if (form) {
+    form.addEventListener("submit", async function (e) {
+      e.preventDefault();
+
+      const formData = new FormData(form);
+
+      try {
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            'Accept': 'application/json'
+          }
+        });
+
+        if (response.ok) {
+          form.style.display = "none";
+          successMessage.style.display = "block";
+        } else {
+          alert("Something went wrong. Please try again later.");
+        }
+      } catch (error) {
+        alert("Network error. Please try again later.");
+      }
+    });
+  }
+</script>
 </body>
 </html>
