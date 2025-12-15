@@ -1248,3 +1248,29 @@ body {
     grid-column: span 12;
   }
 }
+/* ===============================
+   FINAL OVERRIDES – DO NOT EDIT ABOVE
+   =============================== */
+
+/* Typography lock */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+
+.hero-title,
+.section-title,
+.leasing-subtitle,
+.card-title,
+.stat-value {
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* Prevent accidental text fade */
+* {
+  opacity: 1;
+}
+
+/* Ensure forms never collapse */
+.contact-form {
+  width: 100%;
+}
