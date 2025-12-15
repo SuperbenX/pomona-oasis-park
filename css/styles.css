@@ -1203,3 +1203,18 @@ body {
 .section-intro.center {
   text-align: center;
 }
+/* Leasing Information title */
+.leasing-info .section-title {
+  text-align: center;
+}
+
+/* Contact two-column layout */
+.contact-section .two-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+.contact-section .two-col .col {
+  flex: 1;
+}
