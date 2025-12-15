@@ -1218,3 +1218,33 @@ body {
 .contact-section .two-col .col {
   flex: 1;
 }
+/* SNAPSHOT GRID – STABLE VERSION */
+.snapshot-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* Small stat cards */
+.snapshot-card {
+  grid-column: span 3;
+}
+
+/* Long content cards */
+.snapshot-card:nth-last-child(2),
+.snapshot-card:nth-last-child(1) {
+  grid-column: span 6;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .snapshot-card {
+    grid-column: span 6;
+  }
+}
+
+@media (max-width: 600px) {
+  .snapshot-card {
+    grid-column: span 12;
+  }
+}
