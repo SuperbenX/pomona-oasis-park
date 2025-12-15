@@ -1180,3 +1180,26 @@ body {
 .contact-value a:hover {
   text-decoration: underline;
 }
+.two-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.two-col .col {
+  flex: 1;
+}
+.two-col {
+  display: flex;
+  align-items: flex-start;
+  gap: 60px;
+}
+
+.two-col .col {
+  flex: 1;
+}
+
+.section-title.center,
+.section-intro.center {
+  text-align: center;
+}
